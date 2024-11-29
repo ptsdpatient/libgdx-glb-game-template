@@ -3,7 +3,9 @@ package com.fps.pg;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import net.mgsx.gltf.loaders.glb.GLBLoader;
+import net.mgsx.gltf.loaders.gltf.GLTFLoader;
 import net.mgsx.gltf.scene3d.scene.SceneAsset;
+import net.mgsx.gltf.scene3d.scene.SceneManager;
 
 public  class Methods {
 
@@ -18,6 +20,9 @@ public  class Methods {
     }
 
     public static SceneAsset loadModel(String value){
-        return new GLBLoader().load(files(value));
+        return new GLTFLoader().load(files(value));
     }
+
+
+
 }
