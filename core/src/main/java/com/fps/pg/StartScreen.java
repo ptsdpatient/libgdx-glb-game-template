@@ -9,12 +9,13 @@ import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
 
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.math.Vector3;
 
 
 public class StartScreen implements Screen {
 
     public PlayGround game;
-    public GameWorld world;
+    public static GameWorld world;
 
     public StartScreen(PlayGround game){
 
@@ -22,7 +23,7 @@ public class StartScreen implements Screen {
 
         Gdx.input.setCursorCatched(true);
 
-        world=new GameWorld();
+        world=new GameWorld(new Vector3(0,15f, 10f));
 
         world.addObject("floor_basic");
 
@@ -35,7 +36,7 @@ public class StartScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        
+
         world.render(delta);
 
     }

@@ -1,15 +1,21 @@
 package com.fps.pg;
 
+import static com.fps.pg.StartScreen.world;
+
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 
 public class GameInput {
+
     public static void StartScreenInputProcessor(){
         Gdx.input.setInputProcessor(
             new InputProcessor() {
 
                 @Override
                 public boolean keyDown(int keycode) {
+
+
                     return false;
                 }
 
