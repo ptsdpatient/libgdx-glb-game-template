@@ -23,9 +23,11 @@ public class StartScreen implements Screen {
 
         Gdx.input.setCursorCatched(true);
 
-        world=new GameWorld(new Vector3(0,15f, 10f));
+        world=new GameWorld(new Vector3(0,2.5f, 10f));
 
-        world.addObject("floor_basic");
+        world.addObject("cube1","cube",new Vector3(0,0,0));
+        world.addObject("cube1","cube",new Vector3(2,0,0));
+
 
     }
 
